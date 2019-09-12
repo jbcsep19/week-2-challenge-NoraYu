@@ -33,7 +33,26 @@ public class Burritos {
 
     }
 
-    private static int random_unrepeated_items(Integer r_num1){
+    //  r_num1 1-9 int[]
+    private static Integer[] random_unrepeated_list(Integer r_num1){
+        Random r=new Random();
+        int r_item=r.nextInt(9)+1;
+        Integer[] i_list=new Integer[r_num1];
+        ArrayList<Integer> base=new ArrayList<>();
+        //generate 1-9 int list
+        for(int i=1;i<10;i++){
+            base.add(i);
+        }
+        for(int i=0;i<r_num1;i++){
+            if(base.contains(r.nextInt(9)+1)){}
+            else{
+
+            }
+
+        }
+
+
+        return i_list;
 
     }
 
