@@ -11,6 +11,7 @@ public class Burritos {
         //int r_num2=r.nextInt(a.size())+1;
         ingredients();
         categories();
+        random_unrepeated_list(7);
 
 
     }
@@ -20,7 +21,7 @@ public class Burritos {
 
 
 
-
+/*
 
 
     private static String burrito(HashMap<String, ArrayList<String>> ingredient){
@@ -33,6 +34,8 @@ public class Burritos {
 
     }
 
+ */
+
     //  r_num1 1-9 int[]
     private static Integer[] random_unrepeated_list(Integer r_num1){
         Random r=new Random();
@@ -43,15 +46,20 @@ public class Burritos {
         for(int i=1;i<10;i++){
             base.add(i);
         }
-        for(int i=0;i<r_num1;i++){
-            if(base.contains(r.nextInt(9)+1)){}
-            else{
-
+        int n=0;
+        for(int i=0;i_list.length<r_num1;i++){
+            r_item=r.nextInt(9)+1;
+            if(base.contains(r_item)){
+                //int n=i_list.length;
+                i_list[n]=r_item;
+                base.remove(r_item);
+                n++;
             }
-
+            else{continue;
+            }
         }
-
-
+        for(int i=0;i<i_list.length;i++){
+            System.out.print(i_list[i]);}
         return i_list;
 
     }
