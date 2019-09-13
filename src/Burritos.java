@@ -7,17 +7,7 @@ public class Burritos {
         HashMap ingredients=ingredients();
         for(int i=1;i<26;i++){
         System.out.println("burrito "+i+": "+burrito(ingredients));}
-
-
     }
-
-
-
-
-
-
-
-
 
     private static String burrito(HashMap<String, ArrayList<String>> ingredient){
         String result;
@@ -53,13 +43,6 @@ public class Burritos {
         return result;
     }
 
-
-
-
-
-
-
-
     private static HashMap<Integer, String>  categories() {
         HashMap<Integer, String> categories = new HashMap<>();
         categories.put(1,"Rice");
@@ -80,13 +63,6 @@ public class Burritos {
         return categories;
     }
 
-
-
-
-
-
-
-
     private static HashMap<String, HashMap<String,Integer>> ingredients() {
         HashMap<String, HashMap<String,Integer>> ingredient = new HashMap<>();
         HashMap<String,Integer> category1 =new HashMap<String,Integer>();
@@ -98,16 +74,6 @@ public class Burritos {
         HashMap<String,Integer> category7 =new HashMap<String,Integer>();
         HashMap<String,Integer> category8 =new HashMap<String,Integer>();
         HashMap<String,Integer> category9 =new HashMap<String,Integer>();
-        String Rice="white, brown, none, all";
-        String Meat= "chicken, steak, carnidas, chorizo, sofritas, veggies, none, all";
-        String Beans="pinto, black, none";
-        String Salsa="mild, medium, hot, none, all";
-        String Veggies="lettuce, fajita veggies, none, all";
-        String Cheese="yes no";
-        String Guac="yes no";
-        String Queso="yes no";
-        String Sour_cream="yes no";
-
 
         category1.put("white rice",1);
         category1.put("brown rice",1);
@@ -142,8 +108,6 @@ public class Burritos {
         category9.put("Sour cream",1);
         category9.put("no Sour cream",0);
 
-
-
         ingredient.put("Rice",category1);
         ingredient.put("Meat",category2);
         ingredient.put("Beans",category3);
@@ -159,7 +123,6 @@ public class Burritos {
         }
          */
         return ingredient;
-
     }
     //  有r_num1个 内容为1-9 的整数array
     private static ArrayList<Integer> random_unrepeated_list(Integer r_num1){
@@ -190,20 +153,5 @@ public class Burritos {
             System.out.print(i_list.get(i));}
          */
         return i_list;
-    }
-    private static ArrayList<String> string_to_Arraylist(String s){
-        ArrayList<String> a =new ArrayList<>();
-        for(String i:s.split(",")){
-            a.add(i);
-        }
-        return a;
-    }
-
-    private static String arraylist_to_string(ArrayList<String> a){
-        String s="";
-        for(String i:a){
-            s=i+" ";
-        }
-        return s;
     }
 }
